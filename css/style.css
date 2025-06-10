@@ -1,1 +1,1152 @@
+/* CSS变量定义 */
+:root {
+    /* 颜色变量 */
+    --primary-color: #8b7355;
+    --secondary-color: #d4af37;
+    --accent-color: #6d5a47;
+    --background-color: #faf9f7;
+    --background-secondary: #f5f3f0;
+    --text-color: #2c2c2c;
+    --text-light: #5a5a5a;
+    --text-accent: #6d5a47;
+    --white: #ffffff;
+    
+    /* 渐变变量 */
+    --gradient-primary: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    --gradient-background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(139, 115, 85, 0.3) 0%, rgba(212, 175, 55, 0.2) 50%, rgba(44, 44, 44, 0.4) 100%);
+    
+    /* 阴影变量 */
+    --shadow-light: 0 5px 15px rgba(139, 115, 85, 0.1);
+    --shadow-medium: 0 10px 30px rgba(139, 115, 85, 0.1);
+    --shadow-heavy: 0 20px 40px rgba(139, 115, 85, 0.2);
+    --shadow-button: 0 8px 25px rgba(139, 115, 85, 0.3);
+    --shadow-button-hover: 0 12px 35px rgba(139, 115, 85, 0.4);
+    
+    /* 字体变量 */
+    --font-logo: 'FZSTK', serif;
+    --font-heading: 'STKAITI', serif;
+    --font-body: 'SimKai', serif;
+    
+    /* 间距变量 */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+    
+    /* 圆角变量 */
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 15px;
+    --radius-full: 50px;
+}
 
+/* 自定义字体声明 */
+@font-face {
+    font-family: 'PALSCRI';
+    src: url('../fonts/PALSCRI.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SimKai';
+    src: url('../fonts/simkai.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'STKAITI';
+    src: url('../fonts/STKAITI.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VLADIMIR';
+    src: url('../fonts/VLADIMIR.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FZSTK';
+    src: url('../fonts/FZSTK.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 通用重置和基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 通用按钮样式 */
+.btn {
+    padding: var(--spacing-sm) 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    min-width: 140px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--white);
+    box-shadow: var(--shadow-button);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-button-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* 通用文本样式 */
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+.text-accent { color: var(--accent-color); }
+.text-light { color: var(--text-light); }
+.text-white { color: var(--white); }
+
+/* 通用背景样式 */
+.bg-primary { background: var(--primary-color); }
+.bg-secondary { background: var(--secondary-color); }
+.bg-gradient { background: var(--gradient-primary); }
+.bg-white { background: var(--white); }
+
+/* 通用间距 */
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+
+/* 通用阴影 */
+.shadow-light { box-shadow: var(--shadow-light); }
+.shadow-medium { box-shadow: var(--shadow-medium); }
+.shadow-heavy { box-shadow: var(--shadow-heavy); }
+
+/* 通用圆角 */
+.rounded { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* 艺术风格导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(250, 249, 247, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-text {
+    font-family: var(--font-logo);
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo-text:hover {
+    color: var(--accent-color);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-text {
+    font-size: 0.9rem;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* 悬停效果 */
+.nav-link:hover .nav-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 活跃状态的文字保持显示 */
+.nav-link.active .nav-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-link.active:hover .nav-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* 艺术主页样式 */
+.art-hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) contrast(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-overlay);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    max-width: 1200px;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 水平布局样式 */
+.artist-info-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    animation: fadeInUp 1s ease-out;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.artist-avatar {
+    flex-shrink: 0;
+    order: 2; 
+    transform: translateX(30px); 
+}
+
+.artist-text {
+    flex: 1;
+    text-align: left;
+    order: 1; /* 确保文字在左边 */
+    min-width: 0; /* 防止文字溢出 */
+    transform: translateX(-30px); 
+}
+
+.avatar-image {
+    width: 22rem; /* 调整头像尺寸以匹配左侧文字高度 */
+    height: 22rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center; /* 确保图片居中显示 */
+    border: none; /* 移除实体边框 */
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.3), /* 内层白色虚化边框 */
+        0 0 20px rgba(255, 255, 255, 0.4), /* 中层白色光晕 */
+        0 0 90px rgba(255, 255, 255, 0.2), /* 外层白色虚化效果 */
+        var(--shadow-medium); /* 保持原有阴影 */
+    transition: all 0.3s ease;
+}
+
+.avatar-image:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 0 4px rgba(255, 255, 255, 0.5), /* 悬停时增强内层白色虚化边框 */
+        0 0 30px rgba(255, 255, 255, 0.6), /* 悬停时增强中层白色光晕 */
+        0 0 60px rgba(255, 255, 255, 0.3), /* 悬停时增强外层白色虚化效果 */
+        0 12px 40px rgba(0, 0, 0, 0.4); /* 保持原有悬停阴影 */
+}
+
+.artist-name {
+    font-family: var(--font-heading);
+    font-size: 6.05605rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.artist-title {
+    font-size: 1.694rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+}
+
+.artist-description {
+    font-size: 1.331rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.artist-description p {
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+}
+
+.artist-description .friend-text {
+    font-size: 3.069rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start; /* 左对齐按钮以配合文字布局 */
+    flex-wrap: wrap;
+}
+
+.btn-explore,
+.btn-contact {
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    min-width: 140px;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-explore {
+    background: linear-gradient(45deg, #8b7355, #d4af37) !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+    color: var(--white);
+    box-shadow: var(--shadow-button);
+    border: none !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+.btn-explore:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-button-hover);
+}
+
+.btn-contact {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-contact:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+    color: white;
+    animation: bounce 2s infinite;
+}
+
+.scroll-hint span {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.scroll-hint i {
+    font-size: 1.5rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* 艺术理念区域 */
+.art-philosophy {
+    padding: 6rem 0;
+    background: var(--background-secondary);
+}
+
+.philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.philosophy-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.philosophy-content blockquote {
+    font-size: 1.43rem;
+    font-style: italic;
+    color: var(--accent-color);
+    margin: 2rem 0;
+    padding: 2rem;
+    border-left: 4px solid var(--secondary-color);
+    background: rgba(212, 175, 55, 0.05);
+    border-radius: 0 10px 10px 0;
+}
+
+.philosophy-content cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.philosophy-content p {
+    font-size: 1.21rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-top: 2rem;
+}
+
+/* 作品集页面样式 */
+.portfolio-main {
+    padding-top: 80px;
+}
+
+.portfolio-header {
+    padding: 4rem 0;
+    background: var(--gradient-background);
+    color: var(--white);
+    text-align: center;
+}
+
+.portfolio-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* 艺术画廊 */
+.art-gallery {
+    padding: 4rem 0;
+    background: var(--background-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center; /* 使所有项目居中 */
+    place-items: center; /* 确保项目在网格中居中 */
+}
+
+.artwork-item {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%; /* 确保项目占满网格单元 */
+    max-width: 350px; /* 限制最大宽度以保持美观 */
+}
+
+.artwork-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.artwork-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.artwork-item:hover .artwork-image {
+    transform: scale(1.05);
+}
+
+.artwork-info {
+    padding: 1.5rem;
+}
+
+.artwork-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.artwork-description {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* 图片查看模态框 */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal .modal-content {
+    position: relative;
+    margin: 5% auto;
+    max-width: 90%;
+    max-height: 80%;
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--secondary-color);
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.image-info {
+    color: var(--white);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.image-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.image-info p {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 联系页面样式 */
+.contact-main {
+    padding-top: 80px;
+}
+
+.contact-header {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--white);
+    text-align: center;
+}
+
+.contact-header .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.contact-header .hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6) contrast(1.1);
+}
+
+.contact-header .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-overlay);
+}
+
+.contact-header .container {
+    position: relative;
+    z-index: 3;
+}
+
+.header-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+.contact-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.contact-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-content {
+    padding: 4rem 0;
+    background: var(--background-color);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    margin-bottom: 3rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-medium);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-text h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-text p {
+    color: var(--accent-color);
+    margin: 0;
+}
+
+/* 联系表单 */
+.contact-form-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-light);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e8e8e8;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--background-color);
+    font-family: var(--font-body);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-button-hover);
+}
+
+/* 页脚样式 */
+.footer {
+    background: var(--gradient-background);
+    color: #faf9f7;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    font-weight: 500;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: var(--shadow-button);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-button-hover);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(250, 249, 247, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(139, 115, 85, 0.1);
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* 移动端导航样式 */
+    .nav-link {
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .nav-text {
+        opacity: 1;
+        transform: translateY(0);
+        font-size: 1rem;
+    }
+
+    .artist-name {
+        font-size: 4.32575rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+
+    .artist-title {
+        font-size: 1.452rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .artist-description {
+        font-size: 1.21rem;
+        margin-bottom: 2rem;
+    }
+
+    .artist-description .friend-text {
+        font-size: 3.069rem;
+    }
+
+    .artist-info-horizontal {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .artist-text {
+        text-align: center;
+        order: 1; /* 在移动设备上文字在上方 */
+        transform: none; /* 在平板设备上重置文字位移 */
+    }
+
+    .artist-avatar {
+        order: 2; /* 在移动设备上头像在下方 */
+        transform: none; /* 在平板设备上重置头像位移 */
+    }
+
+    .avatar-image {
+        width: 18rem; /* 在平板设备上调整头像尺寸 */
+        height: 18rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* 在移动设备上居中按钮 */
+    }
+
+    .btn-explore,
+    .btn-contact {
+        min-width: 200px;
+        text-align: center;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-info-horizontal {
+        gap: 1.5rem;
+    }
+
+    .philosophy-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .portfolio-title,
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-header {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .artist-name {
+        font-size: 3.4606rem;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+    }
+
+    .artist-title {
+        font-size: 1.331rem;
+        margin-bottom: 1rem;
+    }
+
+    .artist-description {
+        font-size: 1.1495rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .artist-description .friend-text {
+        font-size: 2.926rem;
+    }
+
+    .artist-info-horizontal {
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .avatar-image {
+        width: 14rem; /* 在手机设备上调整头像尺寸 */
+        height: 14rem;
+    }
+
+    .hero-actions {
+        gap: 1rem;
+    }
+
+    .btn-explore,
+    .btn-contact {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        min-width: 120px;
+        text-align: center;
+    }
+
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.95rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .contact-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-header {
+        height: 40vh;
+    }
+}
