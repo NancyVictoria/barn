@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - Nancy的艺术世界</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/portfolio.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">Nancy</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-text">首页</span>
+                </a>
+                <a href="portfolio.html" class="nav-link active">
+                    <span class="nav-text">作品集</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <span class="nav-text">联系我</span>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页面内容 -->
+    <main class="portfolio-main">
+        <!-- 作品集标题 -->
+        <section class="portfolio-header">
+            <div class="container">
+                <h1 class="portfolio-title" data-aos="fade-down">艺术作品集</h1>
+                <p class="portfolio-subtitle" data-aos="fade-up" data-aos-delay="200">每一幅作品都是情感与技艺的结晶</p>
+            </div>
+        </section>
+
+        <!-- 作品画廊 -->
+        <section class="art-gallery">
+            <div class="container">
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- 作品将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 图片查看模态框 -->
+        <div class="image-modal" id="imageModal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <img src="" alt="" id="modalImage">
+                <div class="image-info" id="imageInfo">
+                    <h3 id="imageTitle"></h3>
+                    <p id="imageDescription"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nancy 的艺术世界. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

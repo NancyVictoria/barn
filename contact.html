@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我 - Nancy的艺术世界</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/contact.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">Nancy</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-text">首页</span>
+                </a>
+                <a href="portfolio.html" class="nav-link">
+                    <span class="nav-text">作品集</span>
+                </a>
+                <a href="contact.html" class="nav-link active">
+                    <span class="nav-text">联系我</span>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主页面内容 -->
+    <main class="contact-main">
+        <!-- 艺术风格页面标题 -->
+        <section class="contact-header">
+            <div class="hero-background">
+                <img src="images/home/home.jpg" alt="艺术背景" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="contact-title" data-aos="fade-down">联系我</h1>
+                    <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="200">让我们开始一段美好的合作</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系信息和表单 -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- 联系信息 -->
+                    <div class="contact-info" data-aos="fade-right">
+                        <h2>联系信息</h2>
+                        <p class="contact-description">
+                            我很乐意听到您的想法和创意需求。
+                            无论是艺术合作还是创意交流，都欢迎与我联系。
+                        </p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>邮箱</h3>
+                                    <p>nancy@example.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>电话</h3>
+                                    <p>+86 138 0000 0000</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>地址</h3>
+                                    <p>北京市朝阳区</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>在线时间</h3>
+                                    <p>周一至周五 9:00-18:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- 联系表单 -->
+                    <div class="contact-form-section" data-aos="fade-left">
+                        <h2>发送消息</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">姓名 *</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="form-error" id="nameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">邮箱 *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">主题 *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">请选择主题</option>
+                                    <option value="artwork">艺术作品合作</option>
+                                    <option value="commission">定制创作</option>
+                                    <option value="exhibition">展览邀请</option>
+                                    <option value="other">其他</option>
+                                </select>
+                                <span class="form-error" id="subjectError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">消息内容 *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="请详细描述您的需求或想法..."></textarea>
+                                <span class="form-error" id="messageError"></span>
+                            </div>
+
+                            <button type="submit" class="submit-btn">发送消息</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nancy 的艺术世界. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
